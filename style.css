@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1f293a;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: red; */
+
+}
+
+
+span{
+    left:-2%;
+    position: absolute;
+    transform-origin: 158px;
+    width: 32px;
+    height: 6px;
+    background-color:#417eb065;
+    border-radius: 20px;
+    transform: scale(2) rotate(calc(var(--i)*(360deg/50))) ;
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+} 
+
+@keyframes animateBlink {
+    0% {
+        background-color:#0ef;
+    }
+
+    25% {
+        background-color:#417eb065;
+    }
+}
+
+
+.login-box {
+    outline: none;
+    width: 300px;
+
+}
+
+.login-box h1{
+    text-align: center;
+    color: #0ef;
+    margin-bottom: 25px;
+}
+
+.login-box form{
+    position: relative;
+   
+}
+
+.input-box{
+    position: relative;
+    color:white;
+}
+
+.input-box input{
+    position: relative;
+    font-size: 1em;
+    background-color: transparent;
+    outline: none;
+    border: solid 2px #417eb065;
+    border-radius: 30px;
+    padding: 12px;
+    width: 100%;
+    color: white;
+    margin: 10px 0;
+   transition: .5s ease;
+    
+}
+
+.input-box input:focus,
+.input-box input :valid{
+    border-color:#0ef;
+    
+}
+
+.input-box input~label{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-12px);
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box input:focus~label,
+.input-box input :valid~label{
+    color: #0ef;
+    background-color: #1f293a;
+    transform: translateY(-36px);
+    font-size: .9em;
+    padding: 0 10px;
+   
+}
+
+
+
+.forgot-box , .signup-box{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.forgot-box a{
+    color: white;
+    text-decoration: none;
+}
+
+.forgot-box a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    background-color: #0cebd1;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    font-weight: 600;
+    color: rgba(5, 8, 82, 0.999);
+    font-size: 1.1em;
+}
+
+.signup-box a{
+    color: #0cebd1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-box a:hover{
+    text-decoration: underline;
+}
